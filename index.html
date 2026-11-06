@@ -1,0 +1,232 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Родословная Дедусенко — обновлённая версия</title><style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; color: #24292f; background: #edf1f4; }
+body { max-width: 920px; margin: 24px auto; padding: 48px 58px; background: white; box-shadow: 0 2px 18px #24374618; font-size: 16px; line-height: 1.58; }
+h1 { margin: 0 0 28px; padding: 28px 26px; color: #173f5f; background: #eef4f8; border-left: 5px solid #3d6f92; font-size: 36px; line-height: 1.18; letter-spacing: -0.4px; }
+h2 { margin: 44px 0 22px; padding-bottom: 10px; color: #173f5f; border-bottom: 2px solid #9eb7c9; font-size: 27px; line-height: 1.25; }
+h3 { margin: 30px 0 10px; color: #285a78; font-size: 20px; line-height: 1.3; }
+p { margin: 0 0 15px; }
+h1 + p { color: #46535d; }
+ul, ol { margin: 7px 0 20px; padding-left: 28px; }
+li { margin: 0 0 12px; padding-left: 4px; }
+li::marker { color: #3d6f92; font-weight: 600; }
+strong { color: #172b3a; font-weight: 650; }
+a { color: #146a9f; text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: #0b4165; }
+code { padding: 2px 5px; border-radius: 3px; background: #f2f4f5; font-size: 14px; }
+@page { size: A4; margin: 17mm; }
+@media (max-width: 700px) { body { margin: 0; padding: 26px 22px; } h1 { font-size: 29px; padding: 22px 20px; } h2 { font-size: 24px; } }
+@media print { html { background: white; } body { margin: 0; padding: 0; box-shadow: none; font-size: 10.1pt; line-height: 1.43; } h1 { font-size: 24pt; margin-bottom: 6mm; padding: 7mm 6mm; } h2 { break-after: avoid-page; font-size: 17pt; margin: 8mm 0 5mm; } h3 { break-after: avoid-page; font-size: 12.5pt; margin: 6mm 0 2mm; } li { break-inside: avoid-page; } a { color: #145d91; } }
+
+.scan-links { color: #46535d; }
+li > ul { margin-top: 8px; margin-bottom: 0; }
+
+.scan-links { color: #46535d; }
+li > ul { margin-top: 8px; margin-bottom: 0; }
+.scan-viewer { position: fixed; inset: 0; z-index: 1000; display: flex; flex-direction: column; background: rgba(9, 14, 19, .96); color: #edf4f8; }
+.scan-viewer[hidden] { display: none; }
+.scan-viewer__bar { min-height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 8px 14px 8px 20px; background: #14222d; border-bottom: 1px solid #385064; }
+.scan-viewer__title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; line-height: 1.35; }
+.scan-viewer__close { width: 40px; height: 40px; flex: 0 0 auto; border: 1px solid #718999; border-radius: 50%; background: transparent; color: #fff; font: 28px/36px Arial, sans-serif; cursor: pointer; }
+.scan-viewer__close:hover, .scan-viewer__close:focus-visible { background: #2d4354; outline: 2px solid #9fc1d7; outline-offset: 2px; }
+.scan-viewer__body { flex: 1; overflow: auto; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.scan-viewer__body img { max-width: 100%; max-height: calc(100vh - 90px); object-fit: contain; background: #222; box-shadow: 0 6px 34px rgba(0,0,0,.55); cursor: zoom-in; }
+.scan-viewer__body.zoomed { display: block; padding: 16px 0; }
+.scan-viewer__body.zoomed img { max-width: none; max-height: none; margin: 0 auto; cursor: zoom-out; }
+.scan-viewer__loading { position: fixed; top: 50%; left: 0; right: 0; transform: translateY(-50%); text-align: center; color: #c8d6df; font-size: 14px; pointer-events: none; }
+body.viewer-open { overflow: hidden; }
+@media print { .scan-viewer { display: none !important; } }
+#passwordGate { position: fixed; inset: 0; z-index: 2000; display: flex; align-items: center; justify-content: center; padding: 24px; background: #edf1f4; }
+#passwordGate[hidden] { display: none; }
+.gate-card { width: min(420px, 100%); padding: 32px; background: white; box-shadow: 0 2px 18px #24374618; border-top: 5px solid #3d6f92; }
+.gate-card h2 { margin: 0 0 10px; color: #173f5f; font-size: 25px; border: 0; padding: 0; }
+.gate-card p { color: #46535d; font-size: 15px; }
+.gate-form { display: grid; gap: 12px; margin-top: 18px; }
+.gate-form input { width: 100%; padding: 11px 12px; border: 1px solid #9eb7c9; font: inherit; }
+.gate-form input:focus { outline: 2px solid #3d6f92; outline-offset: 2px; }
+.gate-form button { padding: 11px 16px; border: 0; background: #173f5f; color: white; font: inherit; font-weight: 650; cursor: pointer; }
+.gate-form button:hover { background: #0f2d44; }
+.gate-error { margin: 0; color: #9b1c1c; font-size: 14px; }
+.gate-error[hidden] { display: none; }
+#pageContent[hidden] { display: none !important; }
+body.gate-lock { overflow: hidden; }
+@media print { #passwordGate { display: none !important; } #pageContent[hidden] { display: block !important; } }
+</style></head><body>
+<div id="passwordGate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+  <div class="gate-card">
+    <h2 id="gateTitle">Доступ к документу</h2>
+    <p>Введите пароль, чтобы открыть страницу.</p>
+    <form id="gateForm" class="gate-form">
+      <input id="gatePassword" type="password" autocomplete="current-password" placeholder="Пароль" aria-label="Пароль">
+      <p id="gateError" class="gate-error" hidden>Неверный пароль. Попробуйте ещё раз.</p>
+      <button id="gateButton" type="submit">Открыть</button>
+    </form>
+  </div>
+</div>
+<div id="pageContent" hidden>
+<script>
+(function () {
+  'use strict';
+  var SALT = 'dedusenko-html-v1';
+  var EXPECTED = 'cba5b69d598957aaaa8c98461ef850c6fc9d2fffc5c180ae475bb47680b7ec9c';
+  var REAL_TITLE = 'Родословная Дедусенко — обновлённая версия';
+  var gate = document.getElementById('passwordGate');
+  var form = document.getElementById('gateForm');
+  var input = document.getElementById('gatePassword');
+  var error = document.getElementById('gateError');
+  var button = document.getElementById('gateButton');
+  var content = document.getElementById('pageContent');
+
+  function rotr(x, n) { return (x >>> n) | (x << (32 - n)); }
+  function sha256(text) {
+    var K = [0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+    var bytes = new TextEncoder().encode(text);
+    var bitLength = bytes.length * 8;
+    var totalLength = Math.ceil((bytes.length + 9) / 64) * 64;
+    var message = new Uint8Array(totalLength);
+    message.set(bytes);
+    message[bytes.length] = 0x80;
+    var view = new DataView(message.buffer);
+    view.setUint32(totalLength - 8, Math.floor(bitLength / 0x100000000), false);
+    view.setUint32(totalLength - 4, bitLength >>> 0, false);
+    var h = [0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+    for (var offset = 0; offset < totalLength; offset += 64) {
+      var w = new Array(64);
+      var t;
+      for (t = 0; t < 16; t++) w[t] = view.getUint32(offset + t * 4, false);
+      for (t = 16; t < 64; t++) {
+        var s0 = rotr(w[t - 15], 7) ^ rotr(w[t - 15], 18) ^ (w[t - 15] >>> 3);
+        var s1 = rotr(w[t - 2], 17) ^ rotr(w[t - 2], 19) ^ (w[t - 2] >>> 10);
+        w[t] = (w[t - 16] + s0 + w[t - 7] + s1) | 0;
+      }
+      var a = h[0], b = h[1], c = h[2], d = h[3], e = h[4], f = h[5], g = h[6], hh = h[7];
+      for (t = 0; t < 64; t++) {
+        var S1 = rotr(e, 6) ^ rotr(e, 11) ^ rotr(e, 25);
+        var ch = (e & f) ^ (~e & g);
+        var temp1 = (hh + S1 + ch + K[t] + w[t]) | 0;
+        var S0 = rotr(a, 2) ^ rotr(a, 13) ^ rotr(a, 22);
+        var maj = (a & b) ^ (a & c) ^ (b & c);
+        var temp2 = (S0 + maj) | 0;
+        hh = g; g = f; f = e; e = (d + temp1) | 0; d = c; c = b; b = a; a = (temp1 + temp2) | 0;
+      }
+      h[0] = (h[0] + a) | 0; h[1] = (h[1] + b) | 0; h[2] = (h[2] + c) | 0; h[3] = (h[3] + d) | 0;
+      h[4] = (h[4] + e) | 0; h[5] = (h[5] + f) | 0; h[6] = (h[6] + g) | 0; h[7] = (h[7] + hh) | 0;
+    }
+    return h.map(function (x) { return (x >>> 0).toString(16).padStart(8, '0'); }).join('');
+  }
+  function reveal() {
+    gate.hidden = true;
+    content.hidden = false;
+    document.title = REAL_TITLE;
+    document.body.classList.remove('gate-lock');
+  }
+  document.body.classList.add('gate-lock');
+  document.title = 'Защищённая страница';
+  input.focus();
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    error.hidden = true;
+    button.disabled = true;
+    setTimeout(function () {
+      try {
+        if (sha256(SALT + input.value) === EXPECTED) {
+          sessionStorage.setItem('dedusenko-html-auth', '1');
+          reveal();
+        } else {
+          error.hidden = false;
+          input.select();
+        }
+      } catch (e) {
+        error.textContent = 'Не удалось проверить пароль в этом браузере.';
+        error.hidden = false;
+      } finally {
+        button.disabled = false;
+      }
+    }, 0);
+  });
+})();
+</script>
+<div class="scan-viewer" id="scanViewer" role="dialog" aria-modal="true" aria-label="Просмотр скана" hidden>
+  <div class="scan-viewer__bar">
+    <div class="scan-viewer__title" id="scanViewerTitle"></div>
+    <button class="scan-viewer__close" id="scanViewerClose" type="button" aria-label="Закрыть">×</button>
+  </div>
+  <div class="scan-viewer__body" id="scanViewerBody">
+    <img id="scanViewerImage" alt="">
+    <div class="scan-viewer__loading" id="scanViewerLoading">Загрузка скана…</div>
+  </div>
+</div>
+<script>
+(function () {
+  'use strict';
+  const viewer = document.getElementById('scanViewer');
+  const title = document.getElementById('scanViewerTitle');
+  const closeButton = document.getElementById('scanViewerClose');
+  const body = document.getElementById('scanViewerBody');
+  const image = document.getElementById('scanViewerImage');
+  const loading = document.getElementById('scanViewerLoading');
+  let lastLink = null;
+
+  function openViewer(link) {
+    lastLink = link;
+    title.textContent = link.textContent.trim();
+    loading.hidden = false;
+    loading.textContent = 'Загрузка скана…';
+    image.hidden = true;
+    image.alt = title.textContent;
+    image.onload = function () {
+      loading.hidden = true;
+      image.hidden = false;
+    };
+    image.onerror = function () {
+      loading.hidden = false;
+      loading.textContent = 'Не удалось загрузить скан: ' + link.getAttribute('href');
+    };
+    body.classList.remove('zoomed');
+    image.src = link.getAttribute('href');
+    viewer.hidden = false;
+    document.body.classList.add('viewer-open');
+    closeButton.focus();
+  }
+
+  function closeViewer() {
+    viewer.hidden = true;
+    document.body.classList.remove('viewer-open');
+    body.classList.remove('zoomed');
+    image.removeAttribute('src');
+    image.hidden = true;
+    if (lastLink) lastLink.focus();
+  }
+
+  document.addEventListener('click', function (event) {
+    const link = event.target.closest('a[href$=".jpg"]');
+    if (!link) return;
+    event.preventDefault();
+    openViewer(link);
+  });
+  closeButton.addEventListener('click', closeViewer);
+  viewer.addEventListener('click', function (event) {
+    if (event.target === viewer || event.target === body) closeViewer();
+  });
+  image.addEventListener('click', function () {
+    body.classList.toggle('zoomed');
+  });
+  document.addEventListener('keydown', function (event) {
+    if (!viewer.hidden && event.key === 'Escape') {
+      event.preventDefault();
+      closeViewer();
+    }
+  });
+})();
+</script><h1>Родословная Дедусенко — обновлённая версия</h1><p>Даты в дореволюционных метрических книгах приведены по старому стилю. Сведения, не подкреплённые новыми документами, сохранены из исходной родословной с прежними оговорками.</p><h2>I. Захар Фёдорович Дедусенко</h2><p><strong>Родился:</strong> в 1807 г. в с. Жовнин Золотоношского уезда Полтавской губернии.<br>
+<strong>Умер:</strong> до 1899 г.</p><h3>Служба и переезд</h3><ul><li>В 1831 г. поступил в Малороссийский казачий полк.</li><li>В 1838 г. переведён во Владикавказский казачий полк. Сначала переехал без жены; Дарья продала имущество — 4 десятины пахотной земли и огород площадью ½ десятины — и приехала позднее.</li></ul><h3>Первая жена — Дарья Григорьевна</h3><p><strong>Годы жизни:</strong> 1811 — 25.08.1859.<br>
+Захар женился на ней ещё в с. Жовнин. В найденных метрических записях она названа матерью Анисии, Антония, Параскевы, Евдокима и Киприяна.</p><h3>Дети Захара и Дарьи</h3><ol><li value="1"><strong>Анисия Захаровна Дедусенко</strong> — новая находка. Родилась <strong>22.12.1842</strong>, крещена <strong>30.12.1842</strong> в Георгиевской церкви ст. Ардонской. Умерла <strong>12.01.1843</strong> в возрасте 1 года, погребена <strong>14.01.1843</strong>; причина смерти — сухотка.<br><br><span class="scan-links"><a href="IMG/scan-01.jpg" target="_blank" rel="noopener">Скан записи о рождении Анисии</a> · <a href="IMG/scan-02.jpg" target="_blank" rel="noopener">Скан записи о смерти Анисии</a></span></li><li value="2"><strong>Антоний Захарович Дедусенко</strong> — новая находка. Родился <strong>15.01.1844</strong>, крещён <strong>16.01.1844</strong>. Умер <strong>11.02.1844</strong>, погребён <strong>12.02.1844</strong>.<br><br><span class="scan-links"><a href="IMG/scan-03.jpg" target="_blank" rel="noopener">Скан записи о рождении Антония</a> · <a href="IMG/scan-04.jpg" target="_blank" rel="noopener">Скан записи о смерти Антония</a></span></li><li value="3"><strong>Параскева Захаровна Дедусенко</strong> — новая находка. Родилась <strong>26.07.1845</strong>, крещена <strong>27.07.1845</strong>.<br><br><span class="scan-links"><a href="IMG/scan-05.jpg" target="_blank" rel="noopener">Скан записи о рождении Параскевы</a></span></li><li value="4"><strong>Евдоким Захарович Дедусенко</strong> — родился <strong>17.07.1847</strong>, крещён <strong>30.07.1847</strong>. В исходной родословной дата крещения была принята за дату рождения. Умер <strong>18.09.1848</strong>, погребён <strong>20.09.1848</strong>.<br><br><span class="scan-links"><a href="IMG/scan-06.jpg" target="_blank" rel="noopener">Скан записи о рождении Евдокима</a> · <a href="IMG/scan-07.jpg" target="_blank" rel="noopener">Скан записи о смерти Евдокима</a></span></li><li value="5"><strong>Киприян Захарович Дедусенко</strong> — родился <strong>01.10.1849</strong>, крещён <strong>02.10.1849</strong>. Его семья описана ниже.<br><br><span class="scan-links"><a href="IMG/scan-08.jpg" target="_blank" rel="noopener">Скан записи о рождении Киприяна</a></span></li><li value="6"><strong>Параскева Захаровна Дедусенко</strong> — по исходной родословной родилась в <strong>1852 г.</strong> Это отдельная запись в прежней версии дерева; её нельзя автоматически отождествлять с Параскевой, родившейся в 1845 г. Нужно найти смерть первой Параскевы либо иное объяснение повторного имени.</li></ol><h3>Сын Захара с неустановленной матерью</h3><p><strong>Иван Захарович Дедусенко</strong> — новая находка. Умер <strong>12.05.1860</strong> в возрасте 1 года, погребён <strong>14.05.1860</strong>; причина смерти — понос. В записи он назван сыном Захара Дедусенко, но мать не указана, поэтому относить его к Дарье или Евдокии без дополнительных доказательств нельзя.<br>
+<a href="IMG/scan-09.jpg" target="_blank" rel="noopener">Скан записи о смерти Ивана</a></p><h3>Вторая жена — Евдокия Петровна</h3><p><strong>Дата смерти:</strong> 20.04.1870; погребена 22.04.1870.<br>
+<strong>Год рождения:</strong> требует уточнения. В исходной родословной указан 1833 г., но в записи о смерти возраст — 44 года, что соответствует приблизительно 1825/1826 г. рождения.<br>
+Захар женился повторно после смерти Дарьи в 1859 г. После смерти Евдокии в 1870 г. остался вдовцом.<br>
+<a href="IMG/scan-10.jpg" target="_blank" rel="noopener">Скан записи о смерти Евдокии</a></p><h2>II. Киприян Захарович Дедусенко</h2><p><strong>Родился:</strong> 01.10.1849 в ст. Ардонской; крещён 02.10.1849.<br>
+<strong>Дата смерти:</strong> не установлена.<br>
+<a href="IMG/scan-08.jpg" target="_blank" rel="noopener">Скан записи о рождении</a></p><h3>Жена — Ульяна Степановна Лабойко</h3><p>В записи о рождении сына Петра также названа <strong>Иулианией</strong>. Казачья дочь, родилась в 1853 г.; дата смерти не установлена.</p><p>Брак с Киприяном состоялся <strong>08.11.1871</strong> в Георгиевской церкви ст. Ардонской. На момент брака Киприяну было 22 года, Ульяне — 18.</p><ul><li><a href="IMG/scan-11.jpg" target="_blank" rel="noopener">Свидетельства и сообщение о возрасте жениха и невесты, 05.11.1871</a></li><li><a href="IMG/scan-12.jpg" target="_blank" rel="noopener">Свидетельства станичного правления и разрешение на венчание, 06.11.1871</a></li><li><a href="IMG/scan-13.jpg" target="_blank" rel="noopener">Метрическая запись о браке, 08.11.1871</a></li></ul><h3>Служба</h3><ul><li>01.01.1868 зачислен штатным писарем в Полковое правление 1-го Владикавказского полка.</li><li>31.12.1870 зачислен урядником.</li><li>01.01.1871 после упразднения Полкового правления поступил младшим полковым писарем во Владикавказский полк Терского казачьего войска.</li><li>Награждён золотым Георгиевским крестом 4-й степени № 45757 за русско-турецкую войну.</li></ul><h3>Дети Киприяна и Ульяны</h3><ol><li value="1"><strong>Александра Киприяновна Дедусенко</strong> — родилась в 1880 г. В 1896 г. вышла замуж за вахмистра <strong>Ивана Гаврииловича Пацука</strong>. 09.03.1899 у них родился сын <strong>Василий</strong>.<br><br><span class="scan-links"><a href="IMG/scan-14.jpg" target="_blank" rel="noopener">Скан записи о рождении Василия Пацука</a></span></li><li value="2"><strong>Анастасия Киприяновна Дедусенко</strong> — родилась в 1881 г. В 1899 г. была восприемницей при крещении Василия Пацука, сына своей сестры Александры. <strong>12.11.1900</strong> в Константино-Еленинской церкви г. Владикавказа вышла замуж за мещанина <strong>Ивана Семёновича Задиакина</strong>. На момент брака ему было 23 года, ей 19; для обоих это был первый брак.<br><br><span class="scan-links"><a href="IMG/scan-14.jpg" target="_blank" rel="noopener">Скан с упоминанием Анастасии при крещении Василия</a> · <a href="IMG/scan-15.jpg" target="_blank" rel="noopener">Скан записи о браке Анастасии и Ивана Задиакина</a></span></li><li value="3"><strong>Пётр Киприянович Дедусенко</strong> — новая находка. Родился <strong>29.06.1884</strong>, крещён <strong>30.06.1884</strong>.<br><br><span class="scan-links"><a href="IMG/scan-16.jpg" target="_blank" rel="noopener">Скан записи о рождении Петра</a></span></li><li value="4"><strong>Клавдия Киприяновна Дедусенко</strong> — новая находка. Умерла <strong>17.10.1887</strong> в возрасте одного года, погребена 19.10.1887. Приблизительный год рождения — 1886.<br><br><span class="scan-links"><a href="IMG/scan-17.jpg" target="_blank" rel="noopener">Скан записи о смерти Клавдии</a></span></li><li value="5"><strong>Иван Киприянович Дедусенко</strong> — в исходной родословной указан 1887/1888 г. рождения; в акте о рождении сына Виктора записана дата <strong>27.01.1888</strong>. Его семья описана ниже.<br><br><span class="scan-links"><a href="IMG/scan-18.jpg" target="_blank" rel="noopener">Скан гражданского акта с датой рождения Ивана</a></span></li><li value="6"><strong>Мария Киприяновна Дедусенко</strong> — родилась в 1890 г.; другие сведения не установлены.</li><li value="7"><strong>Василий Киприянович Дедусенко</strong> — новая находка. Родился <strong>26.02.1896</strong>, крещён <strong>27.02.1896</strong>.<br><br><span class="scan-links"><a href="IMG/scan-19.jpg" target="_blank" rel="noopener">Скан записи о рождении Василия</a></span></li></ol><p>После 1910 г. по исповедным ведомостям семья числится «в отлучке». Семья предположительно переехала во Владикавказ (что подтверждается браком Ивана Киприяновича) и вернулась в Ардонскую позднее.</p><h3>Киприян как восприемник</h3><p>Эти записи не добавляют детей в семью, но подтверждают общественные связи Киприяна:</p><ul><li><a href="IMG/scan-20.jpg" target="_blank" rel="noopener">Крещение Софьи, дочери Никиты Гордеева Кривенца и Анны Григорьевны</a></li><li><a href="IMG/scan-21.jpg" target="_blank" rel="noopener">Крещение Екатерины, дочери Гавриила Семёнова Черепова и Евдокии Григорьевны</a></li><li><a href="IMG/scan-22.jpg" target="_blank" rel="noopener">Крещение Александры, дочери Константина Казьмина Сокола и Феодосии Павловны, март 1896 г.</a></li></ul><h2>III. Иван Киприянович Дедусенко</h2><p><strong>Родился:</strong> 27.01.1888 по гражданскому акту 1925 г. в ст. Ардонской.<br>
+<strong>Дата смерти:</strong> не установлена.</p><h3>Жена — Анна Гаврииловна Туркова</h3><p>Родилась приблизительно в 1886 г.: в брачной записи 1915 г. указан возраст 29 лет, в акте 1925 г. — 38 лет. Уроженка и казачка <strong>ст. Михайловской Терской области</strong>. Это подтверждает найденный ранее географический след Турковых; версия о донском происхождении остаётся неподтверждённой.</p><p>Брак Ивана и Анны зарегистрирован <strong>14.01.1915</strong> в Вознесенской церкви г. Владикавказа.<br>
+<a href="IMG/scan-23.jpg" target="_blank" rel="noopener">Скан записи о браке Ивана и Анны</a></p><div style="margin:14px 0 22px;border:1px solid #9eb7c9;background:#f8fafc;"><div style="padding:12px 16px;color:#173f5f;font-weight:650;background:#eef4f8;border-bottom:1px solid #9eb7c9;">Текст венчальной метрики 14.01.1915</div><table style="width:100%;border-collapse:collapse;font-size:15px;"><tbody><tr><th scope="row" style="width:190px;text-align:left;vertical-align:top;padding:9px 16px;color:#173f5f;border-bottom:1px solid #dbe5ec;">Счёт браков</th><td style="padding:9px 16px;border-bottom:1px solid #dbe5ec;">1</td></tr><tr><th scope="row" style="width:190px;text-align:left;vertical-align:top;padding:9px 16px;color:#173f5f;border-bottom:1px solid #dbe5ec;">Месяц и день</th><td style="padding:9px 16px;border-bottom:1px solid #dbe5ec;">января 14</td></tr><tr><th scope="row" style="width:190px;text-align:left;vertical-align:top;padding:9px 16px;color:#173f5f;border-bottom:1px solid #dbe5ec;">Жених</th><td style="padding:9px 16px;border-bottom:1px solid #dbe5ec;">канцелярский служитель Владикавказской Духовной Консистории Иван Киприянов Дедусенко, православного вероисповедания, первым браком; лет 26</td></tr><tr><th scope="row" style="width:190px;text-align:left;vertical-align:top;padding:9px 16px;color:#173f5f;border-bottom:1px solid #dbe5ec;">Невеста</th><td style="padding:9px 16px;border-bottom:1px solid #dbe5ec;">казачка станицы Михайловской Терской области Анна Гавриилова Туркова, православного вероисповедания, первым браком; лет 29</td></tr><tr><th scope="row" style="width:190px;text-align:left;vertical-align:top;padding:9px 16px;color:#173f5f;border-bottom:1px solid #dbe5ec;">Таинство совершили</th><td style="padding:9px 16px;border-bottom:1px solid #dbe5ec;">священник П. Королев, диакон Владимир Петров</td></tr><tr><th scope="row" style="width:190px;text-align:left;vertical-align:top;padding:9px 16px;color:#173f5f;">Поручители</th><td style="padding:9px 16px;">по жениху — казак станицы Пришибской Павел Иванов Токарев и казак станицы Ардонской Василий Константинов Сокол; по невесте — полковой писарь 2-го Сунженско-Владикавказского полка Андрей Павлов Шерпилов и владикавказский мещанин Фёдор Фёдоров Грязнов</td></tr></tbody></table></div><h3>Дети Ивана и Анны</h3><ol><li value="1"><strong>Евгений Иванович Дедусенко</strong> — родился <strong>03.02.1917</strong>, крещён <strong>27.02.1917</strong> в Константино-Еленинской церкви г. Владикавказа; умер после 1948 г., точная дата неизвестна. После войны жил в Коми, в Сторожевском районе, с. Керос, работал на лесозаготовках. В 1948 г. арестован по политической статье и осуждён на 10 лет; есть косвенные данные о досрочном освобождении в 1953 г.<br><br><span class="scan-links"><a href="IMG/scan-24.jpg" target="_blank" rel="noopener">Скан записи о рождении Евгения</a></span></li><li value="2"><strong>Алексей Иванович Дедусенко</strong> — 1918/1919 — 08.03.1944. Карточка «Памяти народа» объединяет пять документов: даты рождения 1918/1919, место рождения в военных записях — г. Орджоникидзе (Владикавказ), звание гвардейского старшего сержанта, службу в 3-м гвардейском истребительно-противотанковом артиллерийском полку, две медали «За отвагу» и гибель 08.03.1944 под деревней Рыленки Витебской области. <a href="https://pamyat-naroda.ru/heroes/person-hero104980303/" target="_blank" rel="noopener">Открыть карточку на «Памяти народа»</a>.</li><li value="3"><strong>Валентин Иванович Дедусенко</strong> — 1924 — после 1985. Карточка «Памяти народа» подтверждает год и место рождения — г. Ардон, — военные документы 1943–1945 гг. и представление к ордену Отечественной войны I степени 06.04.1985. <a href="https://pamyat-naroda.ru/heroes/podvig-chelovek_yubileinaya_kartoteka1514662494/" target="_blank" rel="noopener">Открыть карточку на «Памяти народа»</a>.</li><li value="4"><strong>Виктор Иванович Дедусенко</strong> — родился <strong>01.06.1925</strong>, крещён <strong>08.07.1925</strong> в Георгиевской церкви ст. Ардонской. Крёстные: <strong>Виктор Алексеевич Севрюк</strong> и <strong>Параскева Васильевна Рандель</strong>. Пометка о той же выписке № 233 свидетельствует, что церковная и гражданская записи относятся к одному ребёнку. В гражданском акте рождения, составленном 03.06.1925, Виктор назван четвёртым ребёнком и четвёртым оставшимся в живых у Ивана и Анны.<ul><li><a href="IMG/scan-25.jpg" target="_blank" rel="noopener">Церковная метрическая запись о Викторе</a></li><li><a href="IMG/scan-18.jpg" target="_blank" rel="noopener">Гражданский акт о рождении Виктора, часть 1</a></li><li><a href="IMG/scan-26.jpg" target="_blank" rel="noopener">Гражданский акт о рождении Виктора, часть 2</a></li></ul></li></ol><p>Иван Киприянович появляется в документах Ардонской уже в 1919 году — сначала как подписант приходской записи, позже как восприемник. Постоянное местожительство семьи там документально подтверждено к июню 1925 года. Поэтому переезд мог состояться между февралём 1917 и июнем 1925 года; более раннее возвращение Ивана вероятно, но пока не доказано.</p><h2>Нерешённые вопросы</h2><ul><li>Судьба Параскевы 1845 г. рождения и подтверждение записи о Параскеве 1852 г.: фрагментарный поиск новых записей о них не дал.</li><li>Мать Ивана Захаровича, умершего в 1860 г., и запись о его рождении не установлены.</li><li>Дата смерти Дарьи Григорьевны пока сохранена из исходной родословной; метрическая запись, подтверждающая 25.08.1859, не найдена.</li><li>Год рождения Евдокии Петровны требует уточнения: 1833 г. в исходной родословной противоречит возрасту 44 года в записи о смерти 1870 г.</li><li>Судьба Петра (1884) и Василия (1896), сыновей Киприяна и Ульяны.</li><li>Даты смерти Захара, Киприяна, Ульяны, Ивана Киприяновича, Анны и позднейших членов семьи.</li></ul></div></body></html>
